@@ -16,7 +16,7 @@
 
 ## Topic Commands
 ### List of topics
-  `ros2 topic list -t`
+  `ros2 topic list -t`\n
 -t adds the topic type to the output
 
 ### Read data being published into a topic
@@ -26,9 +26,9 @@
   'ros2 topic info <topic_name> --verbose'
 
 ### Show the interface (message type)
-  `ros2 interface show <msg_type>`
+  `ros2 interface show <msg_type>`\n
 msg_type shown via `ros2 topic list -t`
 
 ### Topic publish
-`ros2 topic pub <topic_name> <msg_type> '<args>'`
+`ros2 topic pub <topic_name> <msg_type> '<args>'`\n
 `'<args>'` are the argument you pass in in the form of a YAML string: `"{linear: {x: 2.0}, angular: {y: 3.0}"`
