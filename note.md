@@ -93,10 +93,3 @@ another node (ex: teleop_turtle) has the same action name under client, it sends
 
 ### See data between action client and server
 `ros2 action echo <action_name> <optional arguments/action_types>`
-
-
-
-
-
-
-### Show interface
