@@ -44,7 +44,7 @@ request/response data structure
 ### Service info
   `ros2 service info --verbose <service_name>
 
-### Find service of type (via `ros2 interface show`
+### Find service of type (via `ros2 interface show`)
   `ros2 service find <type_name>`
 
 ### Call a service
@@ -52,3 +52,23 @@ request/response data structure
 
 ### Echo a service
   `ros2 service echo <service_name | service_type> <arguments>
+
+## Parameters (aka node settings)
+
+### List parameters
+  `ros2 param list`
+
+### Get the type and value of a param
+  `ros2 param get <node_name> <parameter_name>`
+
+### Set the value of a param (at runtime)
+  `ros2 param set <node_name> <parameter_name> <value>`
+
+### View all node's current param values
+  `ros2 param dump <node_name>`
+
+### Load param from a file
+  `ros2 param load <node_name> <parameter_file>
+
+### Load param file on node startup
+  `ros2 run <package_name> <executable_name> --ros-args --params-file <file_name.yaml>
