@@ -14,7 +14,7 @@
 ### Info of a node
   `ros2 node info <node_name>`
 
-## Topic Commands
+## Topic (PubSub) Commands
 ### List of topics
   `ros2 topic list -t`<br>
 -t adds the topic type to the output
@@ -30,5 +30,25 @@
 msg_type shown via `ros2 topic list -t`
 
 ### Topic publish
-`ros2 topic pub <topic_name> <msg_type> '<args>'`<br>
+  `ros2 topic pub <topic_name> <msg_type> '<args>'`<br>
 `'<args>'` are the argument you pass in in the form of a YAML string: `"{linear: {x: 2.0}, angular: {y: 3.0}"`
+
+## Service (Request/Respond) Commands
+### Service type  
+  `ros2 service type <service_name>` <br>
+request/response data structure
+
+### Service list
+  `ros2 service list -t`
+
+### Service info
+  `ros2 service info --verbose <service_name>
+
+### Find service of type (via `ros2 interface show`
+  `ros2 service find <type_name>`
+
+### Call a service
+  `ros2 service call <service_name> <service_type> <arguments>
+
+### Echo a service
+  `ros2 service echo <service_name | service_type> <arguments>
