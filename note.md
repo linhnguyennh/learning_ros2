@@ -1,5 +1,5 @@
 # ROS2 Commands
-
+* Interface is the I/O of a type
 ## Node Commands
 ### Launching a node/executable from a package
   `ros2 run <package_name> <executeable_name>`
@@ -72,3 +72,31 @@ request/response data structure
 
 ### Load param file on node startup
   `ros2 run <package_name> <executable_name> --ros-args --params-file <file_name.yaml>`
+
+## Action (topics + services w/ steady feedback, cancelable action)
+the node (ex: turtlesim) responds and provides feedback for the action (in action server) <br>
+another node (ex: teleop_turtle) has the same action name under client, it sends goal for that action <br>
+
+### Get all action in ROS graph
+`ros2 action list -t`
+
+### Check type of action
+`ros2 action type <action_name>`
+
+### Check info
+`ros2 action info <action_name>`
+
+### Check type (same as above in topic)
+### Send goal
+`ros2 action send_goal <action_name> <action_type> <values>` <br>
+`<values>` should be in yaml
+
+### See data between action client and server
+`ros2 action echo <action_name> <optional arguments/action_types>`
+
+
+
+
+
+
+### Show interface
